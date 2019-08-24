@@ -1,7 +1,6 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from config.env import get_env
 from flask import request, Flask
-import json
 
 class Actions:
 	def __init__(self):
@@ -12,7 +11,7 @@ class Actions:
 
 def create_app():
 	app=Flask(__name__)
-	@app.route("/wisdomSpeaker", methods=["GET"])
+	@app.route('/wisdomSpeaker')
 	def WisdomSpeaker():
 		stripesAmount = request.args.get('poloski')
 		actions = Actions()		
@@ -20,3 +19,8 @@ def create_app():
 			actions.speakWisdom()
 		return actions.response
 	return app
+
+
+if __name__ == '__main__':
+	app=create_app()
+	app.run()
