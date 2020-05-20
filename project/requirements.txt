@@ -16,7 +16,7 @@ distro-info===0.21ubuntu2
 entrypoints==0.3
 Flask==1.0.2
 Flask-API==1.1
-httplib2==0.11.3
+httplib2==0.18.0
 idna==2.6
 itsdangerous==0.24
 Jinja2==2.10
